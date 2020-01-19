@@ -1,0 +1,58 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<!DOCTYPE html><html class=''>
+<head>
+<link rel ="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="https://use.typekit.net/ufu0kna.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" width=200px/>
+            <ul>
+                <li><a href=#>About</a></li>
+                <li><a href=#>Login</a></li>
+                <li><a href=#>Sign Up</a></li>
+                <li><a href=#>Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class='container' ng-cloak ng-app="chatApp">
+  <h1>DeepBreath</h1>
+  <div class='chatbox' ng-controller="MessageCtrl as chatMessage">
+    <div class='chatbox__user-list'>
+      <h1>Friends Online</h1>
+      <div class='chatbox__user--active'>
+        <p>Maelyn Pepe</p>
+      </div>
+      <div class='chatbox__user--busy'>
+        <p>Michelle Pepe</p>
+      </div>
+      <div class='chatbox__user--active'>
+        <p>Amy Angular</p>
+      </div>
+      <div class='chatbox__user--active'>
+        <p>Jack Uniden</p>
+      </div>
+      <div class='chatbox__user--away'>
+        <p>Ben Marcus</p>
+      </div>
+    </div>
+    <div class="chatbox__messages" ng-repeat="message in messages">
+      <div class="chatbox__messages__user-message">
+        <div class="chatbox__messages__user-message--ind-message">
+          <p class="name">{{message.Name}}</p>
+          <br/>
+          <p class="message">{{message.Message}}</p>
+        </div>
+      </div>
+    </div>
+    <form>
+      <input type="text" placeholder="Type Message">
+    </form>
+  </div>
+</body></html>
