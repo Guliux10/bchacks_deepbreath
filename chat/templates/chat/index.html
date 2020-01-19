@@ -4,14 +4,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>DeepBreath</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/ufu0kna.css">
     <meta charset="utf-8"/>
-    <title>Chat Rooms</title>
+    
 </head>
 <body>
-    What chat room would you like to enter?<br/>
-    <input id="room-name-input" type="text" size="100"/><br/>
-    <input id="room-name-submit" type="button" value="Enter"/>
-
+    <header>
+            
+        <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+            <div class="image">
+                <a href="homepage.html"><img src="logo.png" width=250px/></a>
+                </div>
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="ourteam.html">Our Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Sign Up</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <div class="container">
+    <div class ="row">
+    <h3>What room would you like to enter?</h3>
+    </div>
+    <input id="room-name-input" type="text" size="50"/>
+    <div class="btncontainer"><input id="room-name-submit" type="button" class="btn btn-info btn-lg" value="Submit"/></div>
+    
+    </div>
     <script>
         document.querySelector('#room-name-input').focus();
         document.querySelector('#room-name-input').onkeyup = function(e) {

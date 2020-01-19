@@ -1,17 +1,24 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+{% load static %}
 
-<!DOCTYPE html><html class=''>
-<head>
-<link rel ="stylesheet" href="css/style.css"/>
-<link rel="stylesheet" href="https://use.typekit.net/ufu0kna.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-</head>
-<body>
-  <header>
-            
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <link rel="stylesheet" href="https://use.typekit.net/ufu0kna.css">
+    <link rel="stylesheet" href="css/style.css"
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+
+<body>   
     <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
         <div class="image">
         <a href="homepage.html"><img src="logo.png" width=250px/></a>
@@ -24,41 +31,62 @@
         </ul>
         
     </nav>
-<div class='container' ng-cloak ng-app="chatApp">
-  <h1>DeepBreath</h1>
-  <div class='chatbox' ng-controller="MessageCtrl as chatMessage">
-    <div class='chatbox__user-list'>
-      <h1>Friends Online</h1>
-      <div class='chatbox__user--active'>
-        
+
+  <div id="frame">
+    <div id="sidepanel">
+      <div id="profile">
+        <div class="wrap">
+          <div id="expanded">
+            <label for="twitter"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></label>
+            <input name="twitter" type="text" value="mikeross" />
+            <label for="twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></label>
+            <input name="twitter" type="text" value="ross81" />
+            <label for="twitter"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></label>
+            <input name="twitter" type="text" value="mike.ross" />
+          </div>
+        </div>
       </div>
-      <div class='chatbox__user--busy'>
-        
+    
+      <div id="contacts">
+        <ul>
+          <li class="contact">
+            <div class="wrap">
+              <span class="contact-status online"></span>
+              
+            </div>
+          </li>
+          <li class="contact active">
+            <div class="wrap">
+              <span class="contact-status busy"></span>
+              <div class="meta">
+            
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class='chatbox__user--active'>
-        
-      </div>
-      <div class='chatbox__user--active'>
-        
-      </div>
-      <div class='chatbox__user--away'>
-       
-      </div>
+
     </div>
-    <div class="chatbox__messages" ng-repeat="message in messages">
-      <div class="chatbox__messages__user-message">
-        <div class="chatbox__messages__user-message--ind-message">
-          <p class="name">{{message.Name}}</p>
-          <br/>
-          <p class="message">{{message.Message}}</p>
+      
+      <div class="messages">
+        <ul id="chat-log">
+          {% comment %} <li class="sent"></li>
+          <li class="replies"></li> {% endcomment %}
+        </ul>
+      </div>
+      <div class="message-input">
+        <div class="wrap">
+        <input id="chat-message-input" type="text" placeholder="Write your message..." />
+        <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+        <button id="chat-message-submit" class="submit">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </button>
         </div>
       </div>
     </div>
-    <form>
-      <input type="text" placeholder="Type Message">
-    </form>
   </div>
-  <script src="{% static 'main.js' %}"></script>
+
+<script src="{% static 'main.js' %}"></script>
 <script src="{% static 'reconnecting-websocket.js' %}"></script>
 <script>
     var roomName = {{ room_name_json }};
@@ -129,4 +157,5 @@
 
 </script>
 </body>
+
 </html>
