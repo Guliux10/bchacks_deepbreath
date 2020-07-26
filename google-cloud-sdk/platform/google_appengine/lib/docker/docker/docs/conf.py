@@ -54,8 +54,8 @@ source_suffix = ['.rst', '.md']
 #
 # source_encoding = 'utf-8-sig'
 
-# The master toctree document.
-master_doc = 'index'
+# The main toctree document.
+main_doc = 'index'
 
 # General information about the project.
 project = u'Docker SDK for Python'
@@ -280,7 +280,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'docker-sdk-python.tex', u'docker-sdk-python Documentation',
+    (main_doc, 'docker-sdk-python.tex', u'docker-sdk-python Documentation',
      u'Docker Inc.', 'manual'),
 ]
 
@@ -320,7 +320,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, 'docker-sdk-python',
+man_pages = [(main_doc, 'docker-sdk-python',
               u'docker-sdk-python Documentation', [author], 1)]
 
 # If true, show URL addresses after external links.
@@ -333,7 +333,7 @@ man_pages = [(master_doc, 'docker-sdk-python',
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'docker-sdk-python', u'docker-sdk-python Documentation',
+    (main_doc, 'docker-sdk-python', u'docker-sdk-python Documentation',
      author, 'docker-sdk-python', 'One line description of project.',
      'Miscellaneous'),
 ]
